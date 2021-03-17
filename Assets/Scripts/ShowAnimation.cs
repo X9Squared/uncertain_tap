@@ -11,13 +11,19 @@ public class ShowAnimation : MonoBehaviour
     public VideoPlayer viewer;
 
     public GameObject attached;
+    public GameObject canvas;
+    public CanvasGroup group;
+    public FadeAnim fadeScript;
+   
     //public GameObject prefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Set up the videosource to be able to play the clips
+        //Set up variables on start of program
         viewer = attached.GetComponent<VideoPlayer>();
+        group = canvas.GetComponent<CanvasGroup>();
+        fadeScript = canvas.GetComponent<FadeAnim>();
         //Load all the clips from the Resources folder (talk to me if you want to know more
         //about exactly what the Resources folder is)
         animImport = Resources.LoadAll("VideoAssets", typeof(VideoClip));
@@ -36,16 +42,21 @@ public class ShowAnimation : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            viewer.clip = anims[0];
-            viewer.Prepare();
-            viewer.Play();
+            StartCoroutine(playAnimation(anims[0], 0.25f));
         }
         else if (Input.GetKeyDown(KeyCode.J))
         {
-            viewer.clip = anims[1];
-            viewer.Prepare();
-            viewer.Play();
+            StartCoroutine(playAnimation(anims[1], 1f));
         }
     }
 
+    IEnumerator playAnimation(VideoClip v, float delay)
+    {
+        viewer.clip = v;
+        viewer.Prepare();
+        viewer.Play();
+        fadeScript.FadeMeIn(group, delay);
+        fadeScript.FadeMeOut(group, delay);
+        yield return null;
+    }
 }
