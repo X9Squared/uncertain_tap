@@ -11,6 +11,7 @@ public class ShowAnimation : MonoBehaviour
     public VideoPlayer viewer;
 
     public GameObject attached;
+    //public GameObject prefab;
 
     // Start is called before the first frame update
     void Start()
