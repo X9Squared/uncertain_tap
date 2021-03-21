@@ -104,6 +104,22 @@ public class ShowAnimation : MonoBehaviour
         {
             StartCoroutine(playAnimation(anims[15], 0.5f));
         }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            StartCoroutine(playAnimation(anims[16], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.T))
+        {
+            StartCoroutine(playAnimation(anims[17], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.U))
+        {
+            StartCoroutine(playAnimation(anims[18], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.V))
+        {
+            StartCoroutine(playAnimation(anims[19], 0.5f));
+        }
     }
 
     IEnumerator playAnimation(VideoClip v, float delay)
