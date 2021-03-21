@@ -40,13 +40,69 @@ public class ShowAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             StartCoroutine(playAnimation(anims[0], 0.25f));
         }
-        else if (Input.GetKeyDown(KeyCode.J))
+        else if (Input.GetKeyDown(KeyCode.B))
         {
             StartCoroutine(playAnimation(anims[1], 1f));
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            StartCoroutine(playAnimation(anims[2], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            StartCoroutine(playAnimation(anims[3], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            StartCoroutine(playAnimation(anims[4], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.F))
+        {
+            StartCoroutine(playAnimation(anims[5], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.G))
+        {
+            StartCoroutine(playAnimation(anims[6], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.H))
+        {
+            StartCoroutine(playAnimation(anims[7], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.I))
+        {
+            StartCoroutine(playAnimation(anims[8], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.J))
+        {
+            StartCoroutine(playAnimation(anims[9], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.K))
+        {
+            StartCoroutine(playAnimation(anims[10], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.L))
+        {
+            StartCoroutine(playAnimation(anims[11], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.M))
+        {
+            StartCoroutine(playAnimation(anims[12], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.N))
+        {
+            StartCoroutine(playAnimation(anims[13], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            StartCoroutine(playAnimation(anims[14], 0.5f));
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            StartCoroutine(playAnimation(anims[15], 0.5f));
         }
     }
 
