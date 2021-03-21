@@ -18,7 +18,7 @@ public class HueChange : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            panel.color = newColor();
+            panel.color = Color.Lerp(panel.color, newColor(), Mathf.PingPong(Time.time, 1));
         }
     }
 
