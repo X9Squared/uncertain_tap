@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 7717247924168476800}
   - component: {fileID: 7717247924168476801}
   - component: {fileID: 7717247924168476803}
-  - component: {fileID: 4125284564425100450}
   m_Layer: 5
-  m_Name: Panel 1
+  m_Name: mp4Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,19 +106,3 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
---- !u!114 &4125284564425100450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7717247924168476807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 868d3f0c00f21954fbea17056dc34bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animImport: []
-  anims: []
-  viewer: {fileID: 7717247924168476801}
-  attached: {fileID: 7717247924168476807}
