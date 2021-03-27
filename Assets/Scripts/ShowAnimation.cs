@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using System.IO;
+using System.Linq;
 
 public class ShowAnimation : MonoBehaviour
 {
@@ -26,7 +27,11 @@ public class ShowAnimation : MonoBehaviour
         viewer = attached.GetComponent<VideoPlayer>();
         group = canvas.GetComponent<CanvasGroup>();
         fadeScript = canvas.GetComponent<FadeAnim>();
-        anims = Directory.GetFiles(filePath);
+        anims = Directory.GetFiles(filePath).Where(name => !name.EndsWith(".meta")).ToArray();
+        for (int i = 0; i < anims.Length; i++)
+        {
+            anims[i] = Path.GetFileName((string)anims[i]);
+        }
     }
 
     // Update is called once per frame
@@ -116,7 +121,8 @@ public class ShowAnimation : MonoBehaviour
 
     IEnumerator playAnimation(string s, float delay)
     {
-        viewer.url = s;
+        string url = System.IO.Path.Combine(Application.streamingAssetsPath, s);
+        viewer.url = url;
         viewer.Prepare();
         viewer.Play();
         fadeScript.FadeMeIn(group, delay);
