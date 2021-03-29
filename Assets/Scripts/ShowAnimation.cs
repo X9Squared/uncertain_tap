@@ -31,6 +31,7 @@ public class ShowAnimation : MonoBehaviour
         for (int i = 0; i < anims.Length; i++)
         {
             anims[i] = Path.GetFileName((string)anims[i]);
+            Debug.Log(anims[i]);
         }
     }
 
@@ -122,6 +123,7 @@ public class ShowAnimation : MonoBehaviour
     IEnumerator playAnimation(string s, float delay)
     {
         string url = System.IO.Path.Combine(Application.streamingAssetsPath, s);
+        Debug.Log(url);
         viewer.url = url;
         viewer.Prepare();
         viewer.Play();
